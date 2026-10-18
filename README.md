@@ -17,4 +17,4 @@ Manual contouring of clinical target volumes (CTVs) and organs at risk (OARs) is
 nnU-Net v2 · PyTorch · 3D full-resolution U-Net · transfer learning (encoder initialisation) · Dice and 95th-percentile Hausdorff distance · GPU/SLURM training · statistical comparison of model variants
 
 ## Code and data
-The clinical data, trained models and source code are confidential under the host agreement and are not published. A from-scratch reimplementation of the pipeline on open data is here: [link to Option B repo].
+The clinical data, trained models and source code are confidential under the host agreement and are not published. 
