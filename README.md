@@ -1,20 +1,17 @@
-# Deep learning auto-segmentation for breast and prostate radiotherapy planning
+# MSc thesis — deep learning auto-segmentation for radiotherapy planning
 
-**MSc Artificial Intelligence thesis — University of Amsterdam**
-Hosted at Curtin University, Perth (Jan–Jun 2026). Supervisors: Hoel Kervadec (UvA), Curtise Ng (Curtin).
+**Development of Clinically Usable Deep Learning-Based Auto-Segmentation Model for Breast and Prostate Radiation Therapy Treatment Planning Through Transfer Learning**
 
-*Development of Clinically Usable Deep Learning-Based Auto-Segmentation Model for Breast and Prostate Radiation Therapy Treatment Planning Through Transfer Learning*
+MSc Artificial Intelligence, University of Amsterdam · hosted at Curtin University, Perth · 2026
 
-## Summary
-Manual contouring of clinical target volumes (CTVs) and organs at risk (OARs) is slow and varies between clinicians. This thesis trains and evaluates nnU-Net v2 auto-segmentation models for two cancer types and tests whether cross-anatomy transfer learning helps.
+## Overview
+Developed and evaluated 3D medical image segmentation models (nnU-Net v2, PyTorch) to support automated radiotherapy treatment planning, and investigated transfer learning as a way to improve model generalisation across clinical datasets and anatomies. Models were evaluated against clinical acceptance criteria using Dice and Hausdorff-based metrics, with GPU/SLURM-based training and reproducible comparison workflows.
 
-- **Breast (226 patients):** nnU-Net benchmarked against commercial auto-segmentation software. Clinically acceptable accuracy (DSC ≥ 0.90) for heart (0.965) and lungs (0.987–0.989), matching or exceeding the commercial tool; smaller structures and CTVs fell below the threshold.
-- **Prostate (six genitourinary substructures):** trained from scratch and with encoder weights transferred from the breast model. Strong for the bladder (DSC 0.954), lower for the five smaller substructures (0.539–0.711).
-- **Transfer learning:** no statistically significant gain from breast→prostate transfer (all differences within ±0.012, p > 0.05).
-- **Main finding:** structure size is the strongest predictor of segmentation performance; custom nnU-Net models are clinically competitive for large, well-defined structures, while small and low-contrast structures need further work.
+## Confidentiality
+This project was conducted under a confidentiality agreement with the host institutions. The data, methods, results, trained models, figures and code are not published.
 
-## Methods
-nnU-Net v2 · PyTorch · 3D full-resolution U-Net · transfer learning (encoder initialisation) · Dice and 95th-percentile Hausdorff distance · GPU/SLURM training · statistical comparison of model variants
+## Public reimplementation
+An independent, from-scratch nnU-Net implementation on a public dataset (Medical Segmentation Decathlon) is in progress and will be linked here.
 
-## Code and data
-The clinical data, trained models and source code are confidential under the host agreement and are not published. 
+## Contact
+Camille Niessink · [LinkedIn](https://www.linkedin.com/in/camille-niessink-5796a4204)
